@@ -1,5 +1,5 @@
 # oo3FlashProject
-Members: Aldaba, Caidic, Cid
+Members: Aldaba, Caidic, Cid(Leader)
 
 Title: FlashFitness
 
