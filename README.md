@@ -12,5 +12,4 @@ calorie tracker for the students to follow.
 
 Features:
 - Exercise database
-- Workout Recommendations
 - Calorie Tracker
