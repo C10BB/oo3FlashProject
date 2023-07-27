@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.chart.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="564.0" prefWidth="874.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.flashfitness.FlashFitnessController">
+<AnchorPane prefHeight="564.0" prefWidth="874.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.flashfitness.FlashFitnessController">
    <children>
       <Label layoutX="344.0" layoutY="14.0" text="Calorie Tracker">
          <font>
@@ -61,5 +65,6 @@
       <Label fx:id="fatsDis" layoutX="603.0" layoutY="203.0" prefHeight="17.0" prefWidth="104.0" />
       <Label fx:id="carbsDis" layoutX="603.0" layoutY="241.0" prefHeight="17.0" prefWidth="104.0" />
       <PieChart fx:id="macrosPie" layoutX="422.0" layoutY="262.0" prefHeight="272.0" prefWidth="377.0" />
+      <Label fx:id="bmiWarning" layoutX="14.0" layoutY="523.0" prefHeight="17.0" prefWidth="610.0" textFill="RED" />
    </children>
 </AnchorPane>

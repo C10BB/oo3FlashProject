@@ -87,6 +87,9 @@ public class FlashFitnessController implements Initializable {
     @FXML
     private PieChart macrosPie;
     double protein = 0 , fats = 0, carbs=0;
+    ////
+    @FXML
+    private Label bmiWarning;
 
     public void calculateCalorieIntake(ActionEvent event){
         int flagGender = 0;
@@ -102,7 +105,7 @@ public class FlashFitnessController implements Initializable {
         }
 
         ////
-        int height, weight, age;
+        double height, weight, age;
         double bmr = 0;
 
         height = Integer.parseInt(heightInput.getText());
@@ -122,6 +125,24 @@ public class FlashFitnessController implements Initializable {
             bmr = (10*weight) + (6.25*height) + (5*age) -161;
             System.out.println(bmr);
         }
+
+        ////calculate the BMI
+        double bmi = 0;
+        bmi = (weight / ((height/100)*(height/100)));
+        String bmiWrd = String.valueOf(String.format("%g%n",bmi));
+        if (bmi < 18.5) {
+            bmiWarning.setText("*Your BMI is: "+bmiWrd+"which is classified as UNDERWEIGHT." + "We kindly suggest you to take calorie surplus.");
+        }
+        else if (bmi < 25) {
+            bmiWarning.setText("*Your BMI is:"+bmiWrd+"which is classified as NORMAL.");
+        }
+        else if (bmi < 30) {
+            bmiWarning.setText("*Your BMI is:"+bmiWrd+"which is classified as OVERWEIGHT." + "We kindly suggest you to take calorie deficit.");
+        }
+        else {
+            bmiWarning.setText("*Your BMI is:"+bmiWrd+"which is classified as OBESE." + "We kindly suggest you to take calorie deficit.");
+        }
+
         ////apply the activity level to the bmr
         double calorieIntake = 0;
 
@@ -248,7 +269,6 @@ public class FlashFitnessController implements Initializable {
     private Button exitButton;
     @FXML
     private AnchorPane mainMenu;
-
 
     public void exit(ActionEvent event) {
 
