@@ -1,3 +1,9 @@
+//oo3FlashProject
+//Aldaba, Samantha Louise D.
+//Caidic, Redrick Marel B.
+//Cid, Brent Benette F. (Leader)
+//EQ3
+
 package com.example.flashfitness;
 
 import javafx.collections.FXCollections;
@@ -50,7 +56,7 @@ public class FlashFitnessController implements Initializable {
         stage.show();
     }
 
-    ///
+    /// declare the variables for the calorie tracker
     @FXML
     private RadioButton maleButton, femaleButton;
     @FXML
@@ -116,7 +122,7 @@ public class FlashFitnessController implements Initializable {
             bmr = (10*weight) + (6.25*height) + (5*age) -161;
             System.out.println(bmr);
         }
-        ////
+        ////apply the activity level to the bmr
         double calorieIntake = 0;
 
         if(activity1.isSelected()){
@@ -137,7 +143,7 @@ public class FlashFitnessController implements Initializable {
         }else {
             System.out.println("Choose One Option");
         }
-        ///////
+        /////// calculate the final calorie intake value from the calorie goal.
         double calorieIntakeFinal = 0;
         if(calorieDef.isSelected()){
             calorieIntakeFinal = calorieIntake - 500;
@@ -165,6 +171,8 @@ public class FlashFitnessController implements Initializable {
        updatePieChart();
 
     }
+
+    ////display the macros thru a pie chart
     private ObservableList<PieChart.Data> pieData = FXCollections.observableArrayList();
     private void updatePieChart() {
         // Clear previous data
@@ -199,7 +207,7 @@ public class FlashFitnessController implements Initializable {
     }
 
 
-
+    ///exercise database
     public void exDatabaseButtonClick(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("ExercDatabase.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -208,6 +216,8 @@ public class FlashFitnessController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
+
+    ////declare the variables in the exercise database.
 
     @FXML BorderPane exPage;
     @FXML AnchorPane mainPage;
@@ -218,6 +228,8 @@ public class FlashFitnessController implements Initializable {
     @FXML private void armsPageClick(MouseEvent event){loadPage("armPage.fxml");}
     @FXML private void absPageClick(MouseEvent event){loadPage("absPage.fxml");}
     @FXML private void legsPageClick(MouseEvent event){loadPage("legsPage.fxml"); }//legPics.setImage(legsP);
+
+    ////this makes the buttons and each fxml file of each muscle group to show on the same page once the button is clicked.
     private void loadPage(String page) {
         Parent root = null;
         try {
@@ -229,6 +241,9 @@ public class FlashFitnessController implements Initializable {
         exPage.setCenter(root);
     }
 
+
+
+    //// exit from the main menu
     @FXML
     private Button exitButton;
     @FXML

@@ -1,3 +1,10 @@
+//oo3FlashProject
+//Aldaba, Samantha Louise D.
+//Caidic, Redrick Marel B.
+//Cid, Brent Benette F. (Leader)
+//EQ3
+
+
 package com.example.flashfitness;
 
 import javafx.application.Application;
