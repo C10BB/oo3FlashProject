@@ -240,8 +240,8 @@ public class FlashFitnessController implements Initializable {
 
     ////declare the variables in the exercise database.
 
-    @FXML BorderPane exPage;
-    @FXML AnchorPane mainPage;
+    @FXML private BorderPane exPage;
+    @FXML private AnchorPane mainPage;
 
     @FXML private void home(MouseEvent event){exPage.setCenter(mainPage);}
     @FXML private void chestPageClick(ActionEvent event){loadPage("chestPage.fxml");}

@@ -1,0 +1,74 @@
+//oo3FlashProject
+//Aldaba, Samantha Louise D.
+//Caidic, Redrick Marel B.
+//Cid, Brent Benette F. (Leader)
+//EQ3
+
+
+@startuml
+title __FlashFitness UML Diagram__\n
+set namespaceSeparator none
+namespace com.example.flashfitness{
+    class FlashFitness{
+        +start()
+    }
+
+    class FlashFitnessController{
+        +backToMenuClick(ActionEvent event) : IOException
+        +calorieTrackerButtonClick(ActionEvent event) : IOException
+        +calculateCalorieIntake(ActionEvent event)
+        +initialize(URL url, ResourceBundle resourceBundle)
+        +exDatabaseButtonClick(ActionEvent event) : IOException
+        +exit(ActionEvent event)
+
+        +double : protein = 0 , fats = 0, carbs = 0
+        +double : height, weight, age
+        +double : bmr = 0, bmi = 0,double calorieIntake = 0
+        +double : calorieIntakeFinal = 0
+        +int : flagGender = 0
+
+        -updatePieChart()
+        -home(MouseEvent event)
+        -chestPageClick(MouseEvent event)
+        -backPageClick(MouseEvent event)
+        -armsPageClick(MouseEvent event)
+        -absPageClick(MouseEvent event)
+        -legsPageClick(MouseEvent event)
+        -loadPage(String page)
+
+        -Parent : root
+        -Stage : stage
+        -Scene : scene
+        -RadioButton : maleButton, femaleButton
+        -RadioButton : activity1, activity2, activity3, activity4, activity5
+        -RadioButton : calorieMain, calorieDef, calorieSurp
+        -Label : genderWarn, displayCalorieIntake, proteinDis, fatsDis, carbsDis
+        -Label : bmiWarning
+        -TextArea : heightInput, weightInput, ageInput
+        -Button : submitButton
+        -PieChart : macrosPie
+        -ObservableList<PieChart.Data>
+        -BorderPane : exPage
+        -AnchorPane : mainPage
+        -Button : exitButton
+        - AnchorPane : mainMenu
+
+    }
+
+    interface Application{
+
+        }
+    interface Initializable{
+
+            }
+
+FlashFitness o-- FlashFitnessController
+Application <|-- FlashFitness
+Initializable <|-- FlashFitnessController
+
+
+}
+
+
+
+@enduml
