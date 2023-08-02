@@ -16,3 +16,6 @@ Features:
 
 ## FlashFitness Demo
 https://youtu.be/Xlx5B06n-jg
+
+## FlashFitness Poster
+![poster_empty](assets/oo3FlashProject-Poster.jpg)
