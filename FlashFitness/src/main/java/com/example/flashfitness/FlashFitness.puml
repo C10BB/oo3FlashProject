@@ -54,21 +54,13 @@ namespace com.example.flashfitness{
         - AnchorPane : mainMenu
 
     }
-
-    interface Application{
-
-        }
-    interface Initializable{
-
-            }
+}
+interface Application{}
+interface Initializable{}
 
 FlashFitness o-- FlashFitnessController
 Application <|-- FlashFitness
 Initializable <|-- FlashFitnessController
-
-
-}
-
 
 
 @enduml
